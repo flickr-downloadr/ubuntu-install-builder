@@ -9,10 +9,6 @@ RUN apt-get update && \
     wget -O installbuilder.run  https://installbuilder.bitrock.com/installbuilder-enterprise-$INSTALLBUILDER_VERSION-linux-x64-installer.run && \
     chmod +x installbuilder.run
 
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
-
-USER docker
-
 ADD install_script.sh .
 
 RUN ./install_script.sh
