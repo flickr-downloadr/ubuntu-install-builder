@@ -2,7 +2,7 @@ FROM mono:latest
 
 # MAINTAINER Floyd Pink <imbleedingme@googlemail.com>
 
-ENV INSTALLBUILDER_VERSION 18.10.0
+ENV INSTALLBUILDER_VERSION 19.5.0
 
 RUN apt-get update && \
     apt-get install -y expect git gtk2.0 sudo wget curl && \
