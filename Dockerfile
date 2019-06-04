@@ -1,8 +1,11 @@
-FROM mono:5.18.1.3
+FROM mono:5.16.0.179
 
 # MAINTAINER Floyd Pink <imbleedingme@googlemail.com>
 
 ENV INSTALLBUILDER_VERSION 19.5.0
+
+RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
+RUN printf "deb http://download.mono-project.com/repo/debian stretch/snapshots/5.16.0.179 main" > /etc/apt/sources.list.d/mono-official-vs.list
 
 RUN apt-get update && \
     apt-get install -y expect git gtk2.0 sudo wget curl && \
