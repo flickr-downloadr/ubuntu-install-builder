@@ -1,8 +1,8 @@
-FROM mono:5.16.0.179
+FROM mono:6.8.0.96
 
 # MAINTAINER Floyd Pink <imbleedingme@googlemail.com>
 
-ENV INSTALLBUILDER_VERSION 19.9.0
+ENV INSTALLBUILDER_VERSION 20.3.0
 
 RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
 RUN printf "deb http://download.mono-project.com/repo/debian jessie/snapshots/5.16.0.179 main" > /etc/apt/sources.list.d/mono-official-vs.list
