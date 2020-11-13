@@ -4,8 +4,8 @@ FROM mono:6.10.0.104
 
 ENV INSTALLBUILDER_VERSION 20.9.0
 
-RUN printf "deb http://archive.debian.org/debian/ buster main\ndeb-src http://archive.debian.org/debian/ buster main\ndeb http://security.debian.org buster/updates main\ndeb-src http://security.debian.org buster/updates main" > /etc/apt/sources.list
-RUN printf "deb http://download.mono-project.com/repo/debian buster/snapshots/5.16.0.179 main" > /etc/apt/sources.list.d/mono-official-vs.list
+# RUN printf "deb http://archive.debian.org/debian/ buster main\ndeb-src http://archive.debian.org/debian/ buster main\ndeb http://security.debian.org buster/updates main\ndeb-src http://security.debian.org buster/updates main" > /etc/apt/sources.list
+# RUN printf "deb http://download.mono-project.com/repo/debian buster/snapshots/5.16.0.179 main" > /etc/apt/sources.list.d/mono-official-vs.list
 
 RUN apt-get update && \
     apt-get install -y expect git gtk2.0 sudo wget curl && \
