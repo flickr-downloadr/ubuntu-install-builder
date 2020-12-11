@@ -1,4 +1,4 @@
-FROM mono:6.10.0.104
+FROM mono:6.12.0.107
 
 # MAINTAINER Floyd Pink <imbleedingme@googlemail.com>
 
