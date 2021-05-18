@@ -2,7 +2,7 @@ FROM mono:6.12.0
 
 # MAINTAINER Floyd Pink <imbleedingme@googlemail.com>
 
-ENV INSTALLBUILDER_VERSION 20.12.0
+ENV INSTALLBUILDER_VERSION 21.3.0
 
 # RUN printf "deb http://archive.debian.org/debian/ buster main\ndeb-src http://archive.debian.org/debian/ buster main\ndeb http://security.debian.org buster/updates main\ndeb-src http://security.debian.org buster/updates main" > /etc/apt/sources.list
 # RUN printf "deb http://download.mono-project.com/repo/debian buster/snapshots/5.16.0.179 main" > /etc/apt/sources.list.d/mono-official-vs.list
