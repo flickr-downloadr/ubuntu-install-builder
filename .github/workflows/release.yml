@@ -1,13 +1,12 @@
-name: Test Building Docker image
+name: Publish Docker image
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 
 jobs:
-  build_image:
-    name: Build Docker image
+  push_to_registry:
+    name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -30,5 +29,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          push: false
-          tags: floydpink/ubuntu-install-builder:latest
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
